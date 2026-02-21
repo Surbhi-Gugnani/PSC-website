@@ -1,0 +1,386 @@
+
+        :root {
+            --primary-blue: #0056b3;     /* Deep Corporate Blue */
+            --light-blue: #e3f2fd;       /* Soft Background Blue */
+            --accent-blue: #0d6efd;      /* Bright Bootstrap Blue */
+            --text-dark: #333333;
+            --white: #ffffff;
+            --hover: #8bc4f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: #f8f9fa;
+            padding-top: 76px; /* Offset for fixed navbar */
+        }
+
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+        .navbar-brand img {
+            height: 100px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-blue);
+        }
+        .btn-donate {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 600;
+        }
+        .btn-donate:hover {
+            background-color: #004494;
+            color: var(--white);
+        }
+        /* .logo-img img{
+            height: 00px;
+            width: 100%;
+
+        } */
+
+        /* --- CAROUSEL STYLES --- */
+        .carousel-item {
+            height: 650px; /* Fixed height for the slider */
+            position: relative;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        /* Dark Overlay for text readability */
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 30, 80, 0.6); /* Blue-ish black overlay */
+            display: flex;
+            align-items: center;
+        }
+        .carousel-caption {
+            position: relative;
+            right: auto;
+            left: auto;
+            bottom: auto;
+            text-align: left;
+            padding-bottom: 0;
+        }
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+        .carousel-caption p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .btn-slider {
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        .stat-box {
+            background: var(--light-blue);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        /* --- LOAN PRODUCTS SECTION --- */
+        .products-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        .loan-table {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+        }
+        .loan-table thead {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        .loan-table th {
+            padding: 18px;
+            font-weight: 600;
+            border: none;
+        }
+        .loan-table td {
+            padding: 15px;
+            color : var(--text-dark);
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+        .loan-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .loan-table tbody tr:hover {
+            background-color: var(--light-blue);
+        }
+
+        /* Core Values */
+        .values-section {
+            padding: 80px 0;
+            background-color: #f1f6fa;
+        }
+        .value-card {
+            background: var(--white);
+            border: none;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align:left;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .value-card:hover
+       {
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            background-color: #f9e67b;
+             /* background-color: var(--hover); */
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        /* --- WHAT WE DO SECTION --- */
+        .what-we-do-section {
+            padding: 80px 0;
+            background-color: #f0f7ff; /* Very light blue tint */
+        }
+        .service-list li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-list i {
+            color: var(--primary-blue);
+        }
+        .branch-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .branch-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .regional-office-badge {
+            background: var(--primary-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Gallery */
+        /* .gallery-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 24px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        } */
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 280px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        /* Hover Overlay */
+        .gallery-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 86, 179, 0.7); /* Blue tint */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- NEW: TEAM SECTION STYLES --- */
+        .team-section {
+            padding: 80px 0;
+            background-color: #f9fbfd;
+            border-top: 1px solid #eef2f6;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .team-img-wrapper {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--light-blue);
+            transition: 0.3s;
+        }
+
+
+        .team-card:hover .team-img-wrapper {
+            border-color: var(--primary-blue);
+        }
+
+        .team-img-wrapper img {
+            width: 100%;
+            height:auto;
+        }
+
+        .team-role {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .team-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            height: 150px;
+            overflow-y:auto;
+            text-align: left;
+        }
+
+        .team-divider {
+            height: 3px;
+            width: 50px;
+            background: var(--primary-blue);
+            margin: 40px auto;
+            border-radius: 2px;
+        }
+  
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px 0 20px 0;
+        }
+        footer h5 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffc107; /* Gold accent for headers */
+        }
+        footer ul li { margin-bottom: 10px; }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        footer a:hover { color: var(--white); text-decoration: underline; }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-caption h1 { font-size: 2rem; }
+            .carousel-item { height: 500px; }
+        }

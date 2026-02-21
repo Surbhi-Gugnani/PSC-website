@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planned Social Concern | Empowering Women</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL STYLES --- */
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #0d6efd;
+            --light-bg: #f4f7f6;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+
+        /* --- NAVBAR ANIMATION --- */
+        .navbar {
+            transition: all 0.4s ease;
+            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-donate {
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50px;
+            padding: 8px 25px;
+            transition: transform 0.3s;
+        }
+
+        .btn-donate:hover {
+            transform: scale(1.05);
+            background: var(--secondary-blue);
+            color: white;
+        }
+
+        /* --- CAROUSEL --- */
+        .carousel-item {
+            height: 80vh; /* Taller hero section */
+            min-height: 500px;
+        }
+        
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            filter: brightness(0.6); /* Darken image for better text readability */
+        }
+
+        .carousel-caption {
+            bottom: 30%;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* --- CARDS & BOXES --- */
+        .stat-box, .value-card, .team-card, .branch-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+
+        /* Hover Effect: Lift up */
+        .stat-box:hover, .value-card:hover, .team-card:hover, .branch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+        }
+
+        /* --- SECTIONS --- */
+        .about-section { padding: 100px 0; background: white; }
+        .what-we-do-section { padding: 100px 0; background: var(--light-bg); }
+        .products-section { padding: 100px 0; background: white; }
+        .values-section { padding: 100px 0; background: #f0f8ff; }
+        .team-section { padding: 100px 0; background: white; }
+        
+        /* Team Image Styling */
+        .team-img-wrapper {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #eef2f6;
+            transition: 0.3s;
+        }
+        
+        .team-card:hover .team-img-wrapper {
+            border-color: var(--primary-blue);
+        }
+
+        .team-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #111;
+            padding-top: 80px;
+            color: #aaa;
+        }
+        footer h5 { color: white; font-weight: 700; margin-bottom: 25px; }
+        footer a { color: #aaa; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: white; padding-left: 5px; }
+        
+        /* Loan Table */
+        .loan-table thead {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="Assets/Images/Logo/logo1.png" alt="PSC Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#values">Core Values</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contact" class="btn btn-donate">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+        </div>
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Assets/Images/Gallery/image30.jpg" class="d-block w-100" alt="Women Group">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Planned Social Concern</h1>
+                    <p class="lead">Empowering women through financial independence.</p>
+                    <a href="#about" class="btn btn-primary btn-lg rounded-pill px-4 mt-3">Our Mission</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/Images/Gallery/image30.jpg" class="d-block w-100" alt="Farming">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Growing Together</h1>
+                    <p class="lead">Serving the community with 7 branches and 60+ dedicated employees.</p>
+                    <a href="#gallery" class="btn btn-outline-light btn-lg rounded-pill px-4 mt-3">View Our Work</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/Images/Gallery/image30.jpg" class="d-block w-100" alt="Meeting">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Building a Future</h1>
+                    <p class="lead">Small loans make big differences.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 mt-3">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="Assets/Images/Gallery/image65.jpg" alt="Meeting" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <h5 class="text-primary fw-bold text-uppercase">Who We Are</h5>
+                    <h2 class="mb-3 fw-bold display-5">Driving Financial Inclusion</h2>
+                    <p class="text-muted"><strong>Planned Social Concern (PSC)</strong> stands tall as a beacon of hope in Rajasthan. Born in 2006, we have tirelessly served underprivileged communities with microcredit and holistic development services.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number counter display-4 fw-bold text-primary" data-target="7">0</div>
+                                <p class="mb-0 fw-bold">Active Branches</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number counter display-4 fw-bold text-primary" data-target="5200">0</div>
+                                <p class="mb-0 fw-bold">Happy Customers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="whatwedo" class="what-we-do-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up">
+                    <h5 class="text-primary fw-bold text-uppercase">Our Impact</h5>
+                    <h2 class="mb-4 fw-bold">Economic Empowerment</h2>
+                    <p class="text-muted mb-4 fs-5">
+                        We provide financial assistance to uplift the poor, especially women, ensuring sustainable livelihoods.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Micro Credit Assistance</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Capacity Building</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Financial Inclusion</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Livelihood Support</li>
+                    </ul>
+                    
+                    <div class="mt-4 p-4 bg-white rounded shadow-sm border-start border-4 border-primary" data-aos="zoom-in">
+                        <h5 class="fw-bold text-dark">Regional Office (Jaipur)</h5>
+                        <p class="mb-0 text-muted">Our central hub coordinating all developmental activities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ps-lg-5">
+                    <h3 class="fw-bold mb-4" data-aos="fade-up">Our Presence</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Phulera</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Jaipur Urban</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Manoharpur</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Govindgarh</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Renwal</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <div class="branch-card">
+                                <h6 class="fw-bold mb-1">Dudu</h6><small class="text-muted">Branch Office</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="container" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <h5 class="text-primary fw-bold text-uppercase">Financial Solutions</h5>
+                <h2 class="fw-bold">Our Loan Products</h2>
+                <p class="text-muted col-lg-6 mx-auto">Transparent and affordable options.</p>
+            </div>
+            <div class="table-responsive shadow rounded">
+                <table class="table table-striped table-hover loan-table text-center mb-0">
+                    <thead>
+                        <tr>
+                            <th>Loan Amount</th>
+                            <th>Installments</th>
+                            <th>Amount/Inst</th>
+                            <th>Insurance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>25,000</td><td>12</td><td>2,400</td><td>0</td></tr>
+                        <tr><td>35,000</td><td>18</td><td>2,400</td><td>315</td></tr>
+                        <tr><td>50,000</td><td>24</td><td>2,700</td><td>900</td></tr>
+                        <tr><td>75,000</td><td>24</td><td>4,000</td><td>1,350</td></tr>
+                        <tr><td>1,00,000</td><td>24</td><td>5,300</td><td>1,800</td></tr>
+                        <tr><td>1,50,000</td><td>24</td><td>7,800</td><td>2,700</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" class="values-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary fw-bold">Unveiling Our Journey</h5>
+                <h2 class="fw-bold">Discovering Our Vision</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="value-card text-center">
+                        <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h4>Our Mission</h4>
+                        <p class="text-muted small">To provide access to financial services to the world's lowest income women entrepreneurs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="value-card text-center">
+                        <div class="value-icon"><i class="fa-solid fa-users"></i></div>
+                        <h4>Our Vision</h4>
+                        <p class="text-muted small">Serving all people especially women, living in poverty to provide quality financial services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="value-card text-center">
+                        <div class="value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h4>Our History</h4>
+                        <p class="text-muted small">Founded in 2006 with funding from Grameen Trust. Partnered with MAS Financial Services & Reliance Capital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4" data-aos="fade-right">
+                <div>
+                    <h5 class="text-primary fw-bold">Our Work</h5>
+                    <h2 class="fw-bold">Impact Gallery</h2>
+                </div>
+                <a href="gallery.html" class="btn btn-outline-primary rounded-pill">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-md-4" data-aos="fade-up"><img src="Assets/Images/Gallery/image6.jpg" class="img-fluid rounded shadow" alt="Gallery"></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><img src="Assets/Images/Gallery/image7.jpg" class="img-fluid rounded shadow" alt="Gallery"></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><img src="Assets/Images/Gallery/image8.jpg" class="img-fluid rounded shadow" alt="Gallery"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary fw-bold text-uppercase">Leadership</h5>
+                <h2 class="fw-bold">Board of Directors</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6" data-aos="flip-left">
+                    <div class="team-card text-center">
+                        <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Rajesh Gupta.jpeg" alt="Director">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rajesh Gupta</h5>
+                        <p class="text-primary small fw-bold">Executive Director</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="team-card text-center">
+                        <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Rajwinder Singh.jpeg" alt="Director">
+                        </div>
+                        <h5 class="fw-bold mb-1">Rajwinder Singh</h5>
+                        <p class="text-primary small fw-bold">Executive Director</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="team-card text-center">
+                        <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Sanjey Gupta.JPG" alt="Director">
+                        </div>
+                        <h5 class="fw-bold mb-1">Sanjay Gupta</h5>
+                        <p class="text-primary small fw-bold">Executive Director</p>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="team-card text-center">
+                        <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Ravi sir.jpg" alt="Director">
+                        </div>
+                        <h5 class="fw-bold mb-1">Ravi Gupta</h5>
+                        <p class="text-primary small fw-bold">COO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-5 border-top"></div>
+
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Management Team</h2>
+            </div>
+             <div class="row g-4 justify-content-center">
+                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="team-card text-center">
+                        <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Dharna.jpg" alt="Manager">
+                        </div>
+                        <h5 class="fw-bold mb-1">Dharna Ramchandani</h5>
+                        <p class="text-primary small fw-bold">Company Secretary</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card text-center">
+                         <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Deepak Sir.jpg" alt="Manager">
+                        </div>
+                        <h5 class="fw-bold mb-1">Deepak Agrawal</h5>
+                        <p class="text-primary small fw-bold">Finance Manager</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card text-center">
+                         <div class="team-img-wrapper">
+                            <img src="Assets/Images/Team/Saten sir.jpg" alt="Manager">
+                        </div>
+                        <h5 class="fw-bold mb-1">Satender Pareek</h5>
+                        <p class="text-primary small fw-bold">Program Manager</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white">Planned Social Concern</h5>
+                    <p class="small text-white-50">Empowering women through sustainable financial solutions.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled small text-white-50">
+                        <li class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> S-15 Krishi Vihar Badarwas, Jaipur</li>
+                        <li class="mb-2"><i class="fa fa-phone me-2"></i> +91 9024567851</li>
+                        <li class="mb-2"><i class="fa fa-envelope me-2"></i> info@psc-microfinance.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; 2024 Planned Social Concern. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            once: true, // Animation happens only once
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+
+        // Number Counter Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.counter');
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / 50; // Faster animation
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(animateCounters, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                });
+            };
+
+            // Trigger counter when scrolled into view
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const aboutSection = document.querySelector('.about-section');
+            if(aboutSection) observer.observe(aboutSection);
+        });
+    </script>
+</body>
+</html>
