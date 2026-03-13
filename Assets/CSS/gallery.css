@@ -48,6 +48,10 @@
             height: 250px; /* Fixed height for uniformity */
             transition: all 0.3s ease;
         }
+        .logo-img
+        {
+            height: 100px;
+        }
 
         .gallery-card img {
             width: 100%;
@@ -80,3 +84,21 @@
 
         /* --- FOOTER --- */
         footer { background-color: var(--primary-blue); color: white; padding: 40px 0; margin-top: 80px; text-align: center; }
+
+
+        /* --- WATERMARK / LABEL STYLES --- */
+       .watermark-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.65); /* Dark transparent background */
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    pointer-events: none; /* Taki text click ko block na kare */
+    z-index: 10;
+    backdrop-filter: blur(2px);
+    border-left: 3px solid var(--primary-blue);
+    }

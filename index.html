@@ -7,7 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="\Assets\CSS\style.css">
+    <link rel="stylesheet" href="\Assets\CSS\contact-form.css">
+
+    
        
 </head>
 <body>
@@ -28,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li> <li class="nav-item ms-lg-3"></li>
                     <li class="nav-item ms-lg-3">
-                        <a href="#contact" class="btn btn-donate">Contact Us</a>
+                        <a href="#contact" class="btn btn-donate">Join Us</a>
                     </li>
                 </ul>
             </div>
@@ -128,64 +132,75 @@
     </section>
 
     <!-- who we are -->
-     <section id="whatwedo" class="what-we-do-section">
+    <section id="whatwedo" class="what-we-do-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up">
                     <h5 class="text-primary fw-bold text-uppercase">Our Impact</h5>
-                    <h2 class="mb-4 fw-bold">Economic Empowerment & Financial Inclusion</h2>
-                    <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.8;">
-                        For the betterment and upliftment of poor people (especially women), economic empowerment is offered by PSC by providing them financial assistance in various fields. We believe in creating sustainable livelihoods through strategic support.
+                    <h2 class="mb-4 fw-bold">Economic Empowerment</h2>
+                    <p class="text-muted mb-4 fs-5">
+                        We provide financial assistance to uplift the poor, especially women, ensuring sustainable livelihoods.
                     </p>
-                    
-                    <ul class="list-unstyled service-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Micro Credit Assistance</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Capacity Building</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Financial Inclusion</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Livelihood Support</li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Micro Credit Assistance</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Capacity Building</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Financial Inclusion</li>
                     </ul>
-
-                    <div class="mt-4 p-4 bg-white rounded shadow-sm border-start border-4 border-primary">
-                        <h5 class="fw-bold text-dark">Regional Office (Jaipur)</h5>
-                        <p class="mb-0 text-muted">Our central hub coordinating all developmental activities across the state.</p>
+                    
+                    <div class="mt-4 p-4 bg-white rounded shadow-sm border-start border-4 border-primary ro-card" data-bs-toggle="modal" data-bs-target="#modalRO" data-aos="zoom-in">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Registered Office (Jaipur)</h5>
+                                <p class="mb-0 text-muted small">Click to view location & details</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-primary"></i>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 ps-lg-5">
-                    <h3 class="fw-bold mb-4">Our Presence</h3>
-                    <p class="text-muted mb-4">Currently, PSC serves the community through our network of 7 active branches:</p>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Phulera</h6>
-                                <small class="text-muted">Branch Office</small>
-                            </div>
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Jaipur Urban</h6>
-                                <small class="text-muted">Branch Office</small>
-                            </div>
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Manoharpur</h6>
-                                <small class="text-muted">Branch Office</small>
-                            </div>
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Govindgarh</h6>
-                                <small class="text-muted">Branch Office</small>
+                    <h3 class="fw-bold mb-4" data-aos="fade-up">Our Presence <span class="fs-6 text-muted fw-normal">(Click for info)</span></h3>
+                    <div class="row g-3">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalPhulera">
+                                <h6 class="fw-bold mb-1">Phulera</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Renwal</h6>
-                                <small class="text-muted">Branch Office</small>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalJaipur">
+                                <h6 class="fw-bold mb-1">Jaipur Urban Branch</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
                             </div>
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Shivdaspura</h6>
-                                <small class="text-muted">Branch Office</small>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalManoharpur">
+                                <h6 class="fw-bold mb-1">Manoharpur</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
                             </div>
-                            <div class="branch-card">
-                                <h6 class="fw-bold mb-1">Dudu</h6>
-                                <small class="text-muted">Branch Office</small>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalGovindgarh">
+                                <h6 class="fw-bold mb-1">Govindgarh</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
+                            </div>
+                        </div>
+                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalRenwal">
+                                <h6 class="fw-bold mb-1">Renwal</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
+                            </div>
+                        </div>
+                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalDudu">
+                                <h6 class="fw-bold mb-1">Dudu</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+                            <div class="branch-card" data-bs-toggle="modal" data-bs-target="#modalShivdaspura">
+                                <h6 class="fw-bold mb-1">Shivdaspura</h6><small class="text-muted">Branch Office</small>
+                                <i class="fa-solid fa-arrow-right click-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -193,6 +208,218 @@
             </div>
         </div>
     </section>
+  
+    <!-- RO details -->
+    <div class="modal fade" id="modalRO" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-building me-2"></i> Registered Office - Jaipur</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" class="modal-branch-img" alt="Office"></div>
+                        <div class="col-6"><img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=600&q=80" class="modal-branch-img" alt="Staff"></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong> +91 9024567851</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong> S-15 Krishi Vihar Badarwas, Jaipur Rajasthan 302019</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3558.772890460267!2d75.72926707543832!3d26.878955776667347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUyJzQ0LjIiTiA3NcKwNDMnNTQuNiJF!5e0!3m2!1sen!2sin!4v1773381447356!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phulera details -->
+    <div class="modal fade" id="modalPhulera" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Phulera Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\Phulera\PHlimage5.jpg" class="modal-branch-img" alt="Branch" width="300px" height="200px" ></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\Phulera\PHlimage9.jpg" class="modal-branch-img" alt="Field" width="300px" height="200px" ></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\Phulera\PHlimage6.jpg" class="modal-branch-img" alt="Field" width="300px" height="200px" ></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong> +9177378 43628</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong>16, Udyog Nagar Ghatala Vihae, Phulera, Rajasthan 303338</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1318.4723680827105!2d75.2405867600674!3d26.87777961578323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUyJzQxLjEiTiA3NcKwMTQnMjkuNSJF!5e0!3m2!1sen!2sin!4v1773212878643!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JUB details -->
+    <div class="modal fade" id="modalJaipur" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Jaipur Urban Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\JUB\JUBimage2.jpg" class="modal-branch-img" alt="Branch" width="300" height="200"></div>
+                        <div class="col-4"><img src="Assets\Images\Branches\JUB\JUBimage6.jpg" class="modal-branch-img" alt="Group" width="300" height="200"></div>
+                        <div class="col-4"><img src="Assets\Images\Branches\JUB\JUBimage7.jpg" class="modal-branch-img" alt="Group" width="300" height="200"></div>
+
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong>+9197733 81088</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong>A13, Pawan Vihar, Gajsinghpura, Jaipur, Rajasthan 302006</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3558.888295571916!2d75.71585467543814!3d26.87528987666953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUyJzMxLjAiTiA3NcKwNDMnMDYuNCJF!5e0!3m2!1sen!2sin!4v1773213982188!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MNP deatils --> 
+     <div class="modal fade" id="modalManoharpur" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Manoharpur Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\Manoharpur\image1.jpg" class="modal-branch-img" alt="Branch" width="300px" height="200px"></div>
+                        
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong>+9195716 61376</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong> Indra Colony, Near BSNL office, Manoharpu, Rajasthan 303104</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3105.901532691568!2d75.95025145197302!3d27.306407417214906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDE4JzIxLjUiTiA3NcKwNTcnMDcuNyJF!5e0!3m2!1sen!2sin!4v1773212512985!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+    <!-- GGR details -->
+      <div class="modal fade" id="modalGovindgarh" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Govindgarh Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\GGR\GGRimage2.jpg" class="modal-branch-img" alt="Branch" width="300" height="200"></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\GGR\GGRimage3.jpg" class="modal-branch-img" alt="Field" width="300" height="200"></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong>+9195499 00210</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong>Asiwal Bhawan, Near Balkui Railway Station Road, Govindgarh, Rajasthan 303712</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3547.1439929206017!2d75.64561747545109!3d27.24601297645015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDE0JzQ1LjciTiA3NcKwMzgnNTMuNSJF!5e0!3m2!1sen!2sin!4v1773215916553!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Renwal details -->
+     <div class="modal fade" id="modalRenwal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Renwal Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" class="modal-branch-img" alt="Branch"></div>
+                        <div class="col-6"><img src="https://images.unsplash.com/photo-1590053930818-a6d123493400?w=600&q=80" class="modal-branch-img" alt="Field"></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong>+91 70147 41380</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong> Main Market,Renwal, Rajasthan</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56961.16850257404!2d75.2977717!3d26.8385075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c141724601fa1%3A0xeab4ab194ccfa03!2sPhulera%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Dudu details -->
+    <div class="modal fade" id="modalDudu" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Dudu Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\DUDU\DUDUimage4.jpg" class="modal-branch-img" alt="Branch" width="300" height="200"></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\DUDU\DUDUimage2.jpg" class="modal-branch-img" alt="Field" width="300" height="200"></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong> +91 63785 21351</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong> Main Market, Dudu, Rajasthan</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3564.75210022962!2d75.22998427543182!3d26.688409776781555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQxJzE4LjMiTiA3NcKwMTMnNTcuMiJF!5e0!3m2!1sen!2sin!4v1773214614658!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SDP details -->
+  <div class="modal fade" id="modalShivdaspura" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">Shivdaspura Branch</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><img src="Assets\Images\Branches\SDP\SDPimage1.jpg" class="modal-branch-img" alt="Branch" width="300" height="200"></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\SDP\SDPimage2.jpg" class="modal-branch-img" alt="Field" width="300" height="200"></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\SDP\SDPimage4.jpg" class="modal-branch-img" alt="Field" width="300" height="200"></div>
+                        <div class="col-6"><img src="Assets\Images\Branches\SDP\SDPimage4.jpg" class="modal-branch-img" alt="Field" width="300" height="200"></div>
+                    </div>
+                    <div class="bg-light p-3 rounded mb-4">
+                        <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong>+91 70627 80004</p>
+                        <p class="mb-0"><i class="fa-solid fa-location-dot text-primary me-3"></i> <strong>Address:</strong>61 A, Near Mahatama Gandhi college, Shivdaspura Rajasthan</p>
+                    </div>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3564.198398974862!2d75.89486307543234!3d26.706108076770988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQyJzIyLjAiTiA3NcKwNTMnNTAuOCJF!5e0!3m2!1sen!2sin!4v1773215551319!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- loan products -->
      <section id="products" class="products-section">
@@ -244,12 +471,6 @@
                             <td>5,300</td>
                             <td>1,800</td>
                         </tr>
-                        <tr>
-                            <td>1,50,000</td>
-                            <td>24</td>
-                            <td>7,800</td>
-                            <td>2,700</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -295,48 +516,7 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <!-- <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Impact Gallery</h2>
-                <p class="text-muted">Glimpses of our field work, team meetings, and success stories.</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Field Work">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Team Discussion">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Office">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Planning">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Women Group">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="Assets\Images\Gallery\image2.jpg" alt="Success">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+  
     <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="d-flex justify-content-between align-items-end mb-5">
@@ -396,14 +576,15 @@
             </section>
 
     <!-- Team -->
-     <section id="team" class="team-section">
+    <section id="team" class="team-section">
         <div class="container">
             <div class="text-center mb-5">
                 <h5 class="text-primary fw-bold text-uppercase">Meet Our Leaders</h5>
                 <h2 class="fw-bold">Board of Directors</h2>
-                <p class="text-muted col-lg-6 mx-auto">Our visionary leaders guiding Planned Social Concern towards a sustainable future.</p>
+                <p class="text-muted col-lg-6 mx-auto">Our visionary leaders guiding Planned Social Concern towards a
+                    sustainable future.</p>
             </div>
-
+    
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-6">
                     <div class="team-card">
@@ -411,8 +592,17 @@
                             <img src="Assets\Images\Team\Rajesh Gupta.jpeg" alt="Director">
                         </div>
                         <h5 class="fw-bold mb-1">Rajesh Gupta</h5>
-                        <p class="team-role">Executive Director</p>
-                        <p class="team-desc">Rajesh brings over 20 years of experience in the microfinance sector. His vision for financial inclusion has been the cornerstone of PSC's growth and outreach to rural communities.</p>
+                        <p class="team-role">Promoter & Director</p>
+                        <p class="team-desc">Mr. Rajesh Gupta is a renowned Chartered Accountant based in Delhi and has
+                            been running an audit and tax consultancy firm for over two decades. He has extensive experience in compliance and
+                            regulatory matters,assisting clients in evaluating foreign exchange, corporate regulatory, and tax requirements.His
+                            areas of expertise include inbound investment advisory, corporate tax planning and compliance, transfer pricing,
+                            financial and tax due diligence, statutory and special audits, expatriate taxation, compensation structuring, and
+                            addressing tax compliance issues for NGOs.
+                            Mr. Gupta graduated from Shri Ram College of Commerce, University of Delhi, and obtained his
+                            professional accounting degree from the Institute of Chartered Accountants of India in 1992. He is currently a Fellow
+                            Member of the Institute.
+                            </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -420,9 +610,22 @@
                         <div class="team-img-wrapper">
                             <img src="Assets\Images\Team\Rajwinder Singh.jpeg" alt="Director">
                         </div>
-                        <h5 class="fw-bold mb-1">Rajwinder Singh</h5>
-                        <p class="team-role">Executive Director</p>
-                        <p class="team-desc">A staunch advocate for women's rights, Suman leads our community development initiatives. She ensures that every loan translates into real empowerment for our beneficiaries.</p>
+                        <h5 class="fw-bold mb-1">Rajvinder Singh</h5>
+                        <p class="team-role">Promoter & Director</p>
+                        <p class="team-desc">Mr. Rajvinder Singh completed his graduation from N.A.S. College, Meerut, in
+                            1974, and obtained his LL.B. degree from D.S. College, Agra University, in 1977.
+                            He is a distinguished legal professional with over 35 years of experience practicing before the
+                            Delhi High Court and the Supreme Court of India. Over the course of his career, he has developed
+                            extensive expertise in diverse areas of law, with a particular interest in matters relating to
+                            the social sector. He remains deeply committed to the upliftment of marginalized and
+                            underprivileged sections of society.
+                            Mr. Singh was appointed as Government Advocate in the Supreme Court of India by the President of
+                            India for a three-year term commencing on November 7, 2005. He has also served as retained
+                            counsel for various financial institutions and insurance companies, representing them before the
+                            Supreme Court of India.
+                            At present, he is actively associated with and working alongside several non-governmental
+                            organizations, contributing his legal expertise to social and community-oriented initiatives.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -431,8 +634,18 @@
                             <img src="Assets\Images\Team\Sanjey Gupta.JPG" alt="Director">
                         </div>
                         <h5 class="fw-bold mb-1">Sanjay Gupta</h5>
-                        <p class="team-role">Executive Director</p>
-                        <p class="team-desc">With a background in chartered accountancy, Rajesh oversees the financial health of the organization, ensuring transparency, compliance, and sustainable economic models.</p>
+                        <p class="team-role">Independent Director</p>
+                        <p class="team-desc">Mr. Sanjay Gupta is a Chartered Accountant (CA) and ICWA professional with over
+                            thirty years of experience in his domain. His expertise includes financial accounting,
+                            consolidation and finalization of accounts and balance sheets, tax planning, product costing,
+                            pricing and cost control, as well as internal, statutory, and management audits.
+                            Prior to transitioning to the development sector, he worked with multinational company also.
+                            He served many renowned international non-governmental organisations including PCI, Aga khan
+                            Foundation etc. In this role, he was responsible for supervising, guiding, and mentoring the
+                            finance team; overseeing financial management and control; ensuring compliance with applicable
+                            business laws and regulations; managing financial reporting to donors and developing systems and
+                            processes for financial operations.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -441,31 +654,61 @@
                             <img src="Assets\Images\Team\Ravi sir.jpg" alt="Director">
                         </div>
                         <h5 class="fw-bold mb-1">Ravi Gupta</h5>
-                        <p class="team-role">COO</p>
-                        <p class="team-desc">Mr. Ravi Gupta serves as the Executive Director and Chief Operating Officer of PSC. He holds a postgraduate degree in Rural Management from the Institute of Engineering and Rural Technology, Allahabad (1996).With a career spanning over twenty years, Mr. Ravi has made significant contributions to the development sector in India and has worked with several national and international non-governmental organizations in various leadership capacities.He possesses extensive experience and expertise in promoting alternative livelihood opportunities for economically disadvantaged communities across different regions of the country. He joined PSC in August 2007 and has been leading the organization since then.</p>
-                        </div>
+                        <p class="team-role">COO & Director</p>
+                        <p class="team-desc">Mr. Ravi Gupta serves as the Director and Chief Operating Officer of PSC. He
+                            completed his post-graduation in Rural Management from the Institute of Engineering and Rural
+                            Technology, Allahabad, in 1996.
+                            With over sixteen years of professional experience, Mr. Gupta has made significant contributions
+                            to India’s development sector. He has worked with several national and international
+                            non-governmental organizations in various capacities, gaining extensive exposure to grassroots
+                            development initiatives.
+                            He possesses rich experience and expertise in promoting alternative livelihood opportunities for
+                            the poor and slum dwellers across different parts of the country. He has successfully developed
+                            and implemented innovative livelihood models, including initiatives supporting families affected
+                            by HIV and those impacted by tsunami disasters.
+                            Mr. Gupta joined Planned Social Concern (PSC) in August 2007 as Chief Operations Officer. In
+                            this role, he is responsible for the overall management and strategic oversight of PSC’s
+                            microfinance activities.
+                        </p>
+                    </div>
                 </div>
             </div>
-
+    
             <div class="team-divider"></div>
-
+    
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Management Team</h2>
-                <p class="text-muted col-lg-6 mx-auto">The dedicated professionals driving our daily operations and field activities.</p>
+                <p class="text-muted col-lg-6 mx-auto">The dedicated professionals driving our daily operations and field
+                    activities.</p>
             </div>
-
+    
             <div class="row g-4 justify-content-center">
-                  <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="team-card">
                         <div class="team-img-wrapper">
-                            <img src="Assets\Images\Team\Dharna.jpg" alt="Manager">
+                            <img src="Assets\Images\Team\Dharna.png" alt="Manager">
                         </div>
                         <h5 class="fw-bold mb-1">Dharna Ramchandani</h5>
                         <p class="team-role">Company Secretary</p>
-                        <p class="team-desc">Dharna is responsible for talent acquisition and staff welfare. She focuses on building a motivated workforce that shares the company's core values and vision.</p>
+                        <p class="team-desc">Ms. Dharna Ramchandani is a qualified Company Secretary and a member of the
+                            Institute of Company Secretaries of India (ICSI). She brings strong expertise in corporate law,
+                            regulatory compliance, and governance frameworks, with a proven track record of ensuring
+                            statutory adherence and organizational transparency.
+    
+                            Since 2019, she has worked with diverse organizations, including a hospitality group and a
+                            pharmaceutical company, serving as Compliance Officer and managing statutory compliances,
+                            regulatory filings, and corporate governance matters.
+    
+                            She also holds certification and professional experience in compliance related to Non-Banking
+                            Financial Companies (NBFCs), further strengthening her expertise in statutory compliance.
+    
+                            Currently, Ms. Ramchandani is serving as Compliance Officer at PSC, where she oversees corporate
+                            compliance and governance functions. In addition to her compliance responsibilities, she is also
+                            entrusted with handling Human Resources functions, contributing to organizational development,
+                            policy implementation, and workforce management.</p>
                     </div>
                 </div>
-
+    
                 <div class="col-lg-4 col-md-6">
                     <div class="team-card">
                         <div class="team-img-wrapper">
@@ -473,10 +716,16 @@
                         </div>
                         <h5 class="fw-bold mb-1">Deepak Agrawal</h5>
                         <p class="team-role">Finance Manager</p>
-                        <p class="team-desc">Deepak is a M.B.A. Finance and C.A. (Inter). He brings over 20 years of experience in the development sector. He has conducted multiple audits for NGOs and government organizations, including projects supported by UNICEF. He has also managed accounting and financial reporting for programs funded by USAID, Save the Children, and the Health and Education Department, Government of Rajasthan. Further, he is holding the position of Head Manager-Finance in PSC since last decade with a vast experience in handling GST, taxation & audit related matters.</p>
+                        <p class="team-desc">Deepak is a M.B.A. Finance and C.A. (Inter). He brings over 20 years of
+                            experience in the development sector. He has conducted multiple audits for NGOs and government
+                            organizations, including projects supported by UNICEF. He has also managed accounting and
+                            financial reporting for programs funded by USAID, Save the Children, and the Health and
+                            Education Department, Government of Rajasthan. Further, he is holding the position of Head
+                            Manager-Finance in PSC since last decade with a vast experience in handling GST, taxation &
+                            audit related matters.</p>
                     </div>
                 </div>
-                
+    
                 <div class="col-lg-4 col-md-6">
                     <div class="team-card">
                         <div class="team-img-wrapper">
@@ -484,7 +733,85 @@
                         </div>
                         <h5 class="fw-bold mb-1">Satender Pareek</h5>
                         <p class="team-role">Program Manager</p>
-                        <p class="team-desc">Satender has over 18 years of experience in microfinance, community building, and the development sector. At PSC, he heads Field Operations and is responsible for implementing PSC’s business plan at the ground level. Prior to joining PSC, he worked with Seva Mandir, Udaipur, for six years as a Community Leader. He holds a Master’s degree in Economics from Rajasthan University.</p>
+                        <p class="team-desc">Satender has over 18 years of experience in microfinance, community building,
+                            and the development sector. At PSC, he heads Field Operations and is responsible for
+                            implementing PSC’s business plan at the ground level. Prior to joining PSC, he worked with Seva
+                            Mandir, Udaipur, for six years as a Community Leader. He holds a Master’s degree in Economics
+                            from Rajasthan University.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form -->
+     <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary fw-bold text-uppercase">Get In Touch</h5>
+                <h2 class="fw-bold">We’d Love to Hear From You</h2>
+                <p class="text-muted col-lg-6 mx-auto">Have a query or need assistance? Reach out to us directly via WhatsApp, email, or fill out the form below.</p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-info-card">
+                        <h4 class="fw-bold mb-4">Direct Contact</h4>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Head Office</h6>
+                                <p class="text-muted small mb-0">S-15 Krishi Vihar Badarwas, Jaipur Rajasthan 302019</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon-box"><i class="fa-brands fa-whatsapp text-success"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-0">WhatsApp / Call</h6>
+                                <p class="text-muted small mb-1">+91 90245 68571</p>
+                                <a href="https://wa.me/919024568571" target="_blank" class="btn btn-sm btn-success rounded-pill px-3">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon-box"><i class="fa-solid fa-envelope text-danger"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Email Us</h6>
+                                <p class="text-muted small mb-1">Hr@pscindia.org</p>
+                                <a href="mailto:Hr@pscindia.org" class="btn btn-sm btn-outline-danger rounded-pill px-3">Send Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h4 class="fw-bold mb-4">Send us a Message</h4>
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-medium small">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name here" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-medium small">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-medium small">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="name@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-medium small">Your Message / Query</label>
+                                    <textarea class="form-control" rows="2" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold">Submit Query <i class="fa-solid fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -498,11 +825,24 @@
                 <div class="col-lg-4 mb-4">
                     <h5 class="text-white">Planned Social Concern</h5>
                     <p class="small text-white-50">Empowering women through sustainable financial solutions. We are committed to social development and economic growth.</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="mt-3">
+                    <a href="https://www.facebook.com/kyujarurihai.PSC/" target="_blank" rel="noopener noreferrer"
+                        class="text-white me-3 fs-5" title="Follow us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                
+
+                
+                    <a href="https://www.linkedin.com/in/planned-social-concern-jaipur-23a944322/" target="_blank" rel="noopener noreferrer"
+                        class="text-white me-3 fs-5" title="Connect on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                
+                    <a href="https://www.instagram.com/planned_social_concern/" target="_blank" rel="noopener noreferrer"
+                        class="text-white me-3 fs-5" title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
                 </div>
                 
                 <div class="col-lg-4 col-6 mb-4">
@@ -516,20 +856,12 @@
                     </ul>
                 </div>
 
-                <!-- <div class="col-lg-3 col-6 mb-4">
-                    <h5>Our Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Micro Loans</a></li>
-                        <li><a href="#">SME Support</a></li>
-                        <li><a href="#">Financial Literacy</a></li>
-                        <li><a href="#">Savings Plans</a></li>
-                    </ul>
-                </div> -->
+            
 
                 <div class="col-lg-4 mb-4">
                     <h5>Contact Us</h5>
-                    <ul class="list-unstyled small text-white-50">
-                        <li class="mb-2"><i class="fa fa-map-marker-alt me-2"></i>S-15 Krishi Vihar Badarwas,Jaipur Rajasthan 302020</li>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fa fa-map-marker-alt me-2"></i>S-15 Krishi Vihar Badarwas,Jaipur Rajasthan 302019</li>
                         <li class="mb-2"><i class="fa fa-phone me-2"></i> +919024567851</li>
                         <li class="mb-2"><i class="fa fa-envelope me-2"></i> info@psc-microfinance.com</li>
                         <li><i class="fa fa-clock me-2"></i> Mon - sat: 10:00 AM - 6:00 PM</li>
@@ -538,14 +870,31 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="mb-0">&copy; 2024 Planned Social Concern. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2026 Planned Social Concern. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
     <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) document.querySelector('.navbar').classList.add('scrolled');
+            else document.querySelector('.navbar').classList.remove('scrolled');
+        });
+
+        // Initialize Tooltips (For the WhatsApp hover text)
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    
+
+    
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll('.counter');
             
@@ -577,6 +926,15 @@
             const aboutSection = document.querySelector('.about-section');
             if(aboutSection) observer.observe(aboutSection);
         });
+        
+
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) document.querySelector('.navbar').classList.add('scrolled');
+            else document.querySelector('.navbar').classList.remove('scrolled');
+        });
+    
     </script>
 </body>
 </html>
