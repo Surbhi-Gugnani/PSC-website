@@ -1,0 +1,81 @@
+/* --- TRIBUTE OVERLAY STYLES --- */
+#tribute-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b1120; /* Deep, respectful dark blue/black */
+    color: #ffffff;
+    z-index: 99999; /* Ensures it stays on top of everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.tribute-content {
+    max-width: 700px;
+    padding: 30px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.tribute-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-blue);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+}
+
+.tribute-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.tribute-subtitle {
+    color: #9ca3af;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tribute-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 40px;
+}
+
+.btn-continue {
+    background: transparent;
+    color: #9ca3af;
+    border: 1px solid #4b5563;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-continue:hover {
+    background: #374151;
+    color: white;
+}
+
+/* Class added by JS to hide the overlay smoothly */
+.hide-tribute {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Prevent scrolling while tribute is active */
+body.tribute-active {
+    overflow: hidden;
+}

@@ -10,11 +10,31 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/Assets/CSS/style.css">
     <link rel="stylesheet" href="/Assets/CSS/contact-form.css">
+    
+    <link rel="stylesheet" href="/Assets/CSS/tribute.css">
+
+   
 
     
        
 </head>
 <body>
+    <div id="tribute-overlay">
+        <div class="tribute-content">
+            <h5 class="text-uppercase text-muted mb-4" style="letter-spacing: 3px; font-size: 0.9rem;">In Loving Memory</h5>
+            
+            <img src="Assets/Images/Team/Ravi sir.jpg" alt="Mr. Ravi Gupta" class="tribute-img">
+            
+            <h1 class="tribute-title">Mr. Ravi Gupta</h1>
+            <p class="tribute-subtitle">Chief Operating Officer & Executive Director</p>
+            
+            <p class="tribute-text">
+                A visionary leader who dedicated his life to empowering the underprivileged. Guiding Planned Social Concern since 2007, his profound impact on alternative livelihoods and community development will forever remain the foundation of our work. His legacy of compassion, strength, and dedication continues to inspire us all.
+            </p>
+            
+            <button id="close-tribute" class="btn-continue">Continue to Website</button>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -219,8 +239,9 @@
                 </div>
                 <div class="modal-body p-4">
                     <div class="row g-2 mb-4">
-                        <div class="col-6"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" class="modal-branch-img" alt="Office"></div>
-                        <div class="col-6"><img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=600&q=80" class="modal-branch-img" alt="Staff"></div>
+                        <div class="col-6"><img src="Assets/Images/Gallery/image96.jpg" class="modal-branch-img" alt="Office" width="300px" height="200px"></div>
+                        <!-- <div class="col-6"><img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=600&q=80" class="modal-branch-img" alt="Staff"></div>
+                          -->
                     </div>
                     <div class="bg-light p-3 rounded mb-4">
                         <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i> <strong>Phone:</strong> +91 9024567851</p>
@@ -744,6 +765,11 @@
         </div>
     </section>
 
+    <!-- Organisational chart -->
+     <section id="team-chart">
+        <img src=" ">
+     </section>
+
     <!-- contact form -->
      <section id="contact" class="contact-section">
         <div class="container">
@@ -933,6 +959,27 @@
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) document.querySelector('.navbar').classList.add('scrolled');
             else document.querySelector('.navbar').classList.remove('scrolled');
+        });
+        // --- TRIBUTE OVERLAY LOGIC ---
+        // Lock scrolling when page loads
+        document.body.classList.add('tribute-active');
+
+        const tributeOverlay = document.getElementById('tribute-overlay');
+        const closeTributeBtn = document.getElementById('close-tribute');
+
+        // Function to hide tribute and restore scrolling
+        const removeTribute = () => {
+            tributeOverlay.classList.add('hide-tribute');
+            document.body.classList.remove('tribute-active');
+        };
+
+        // Automatically hide after 10 seconds (10000 milliseconds)
+        let tributeTimer = setTimeout(removeTribute, 10000);
+
+        // Hide immediately if user clicks "Continue to Website"
+        closeTributeBtn.addEventListener('click', () => {
+            clearTimeout(tributeTimer); // Stop the 10-second timer
+            removeTribute();
         });
     
     </script>
