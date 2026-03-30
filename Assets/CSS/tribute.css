@@ -1,56 +1,59 @@
-/* --- TRIBUTE OVERLAY STYLES --- */
+/* --- TRIBUTE OVERLAY STYLES (UPDATED for Large Rectangular Image) --- */
 #tribute-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #0b1120; /* Deep, respectful dark blue/black */
+    background-color: #0b1120; /* Deep, respectful dark background */
     color: #ffffff;
-    z-index: 99999; /* Ensures it stays on top of everything */
+    z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     transition: opacity 1.5s ease, visibility 1.5s ease;
 }
 
 .tribute-content {
-    max-width: 700px;
-    padding: 30px;
+    max-width: 1100px; /* Wider container for two-column desktop */
+    width: 90%; /* For responsiveness on tablets */
+    padding: 20px;
     animation: fadeInUp 2s ease-out;
 }
 
-.tribute-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+/* Updated Style: Big size, NOT circular */
+.tribute-img-large {
+    width: 100%;
+    max-width: 480px; /* BIG size for desktop */
+    height: auto; /* Preserve aspect ratio */
+    border-radius: 10px; /* Small rounded corners for a professional finish, not circular */
     object-fit: cover;
-    border: 4px solid var(--primary-blue);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-    margin-bottom: 25px;
+    border: 6px solid #1a253a; /* Dark border matching background */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+    outline: 2px solid var(--primary-blue); /* Outer Primary Blue glow */
 }
 
 .tribute-title {
-    font-size: 2.5rem;
+    font-size: 3rem; 
     font-weight: 700;
     margin-bottom: 5px;
-    letter-spacing: 1px;
+    color: #fff;
 }
 
 .tribute-subtitle {
-    color: #9ca3af;
-    font-size: 1.2rem;
+    color: var(--secondary-blue); /* Highlight with secondary blue */
+    font-size: 1.1rem;
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .tribute-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #d1d5db;
-    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #e5e7eb; /* Brighter text on dark bg for readability */
+    margin-bottom: 30px;
 }
 
 .btn-continue {
@@ -69,13 +72,56 @@
     color: white;
 }
 
-/* Class added by JS to hide the overlay smoothly */
 .hide-tribute {
     opacity: 0;
     visibility: hidden;
 }
 
-/* Prevent scrolling while tribute is active */
 body.tribute-active {
     overflow: hidden;
+}
+
+/* --- RESPONSIVE MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    #tribute-overlay {
+        overflow-y: auto; /* Allow scrolling within overlay on small screens */
+        padding: 40px 10px;
+        align-items: flex-start; /* Start content from top on mobile */
+    }
+
+    .tribute-content {
+        text-align: center; /* Center everything on mobile */
+        width: 95%;
+    }
+
+    /* Override Bootstrap col class to ensure stacking and centering */
+    .tribute-grid .col-md-5,
+    .tribute-grid .col-md-7 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important; 
+        padding-left: 15px !important; 
+        padding-right: 15px !important;
+    }
+
+    .tribute-img-large {
+        max-width: 300px; /* Smaller but still substantial size on mobile */
+        margin-bottom: 20px;
+    }
+
+    .tribute-title {
+        font-size: 2.2rem;
+    }
+
+    .tribute-subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .tribute-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
 }
